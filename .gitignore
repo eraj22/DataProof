@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+logs/*.json
+results/private_*.json
+results/private_*.csv
+data/uploads/

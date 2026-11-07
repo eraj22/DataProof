@@ -1,0 +1,1587 @@
+{
+  "manifest": "data\\pilot_manifest.json",
+  "mode": "E3_offline_pilot",
+  "split": "test",
+  "rows": [
+    {
+      "id": "p04",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 9.0,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 7.36,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 7.75,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 7.79,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 8.42,
+          "output": {
+            "value": 100,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 8.97,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 8.98,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 4.0,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 2.67,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2.77,
+          "plan": {
+            "operation": "max",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 2.8,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3.41,
+          "output": {
+            "value": 8,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3.97,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3.98,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3.53,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 2.31,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2.4,
+          "plan": {
+            "operation": "min",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 2.43,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 2.99,
+          "output": {
+            "value": 10,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3.5,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3.51,
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 4.11,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 2.17,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2.25,
+          "plan": {
+            "operation": "median",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 2.28,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3.37,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 4.08,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 4.09,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 2.85,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 2.15,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2.23,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 2.25,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 2.56,
+          "output": {
+            "value": 4,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 2.82,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": []
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 2.83,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3.11,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 2.03,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2.1,
+          "plan": {
+            "operation": "mean",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 2.12,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 2.61,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3.08,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3.09,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 1.97,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 1.88,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1.95,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 1.96,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 1.36,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 1.3,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1.34,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 1.35,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 1.47,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 1.41,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1.46,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 1.46,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.67,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 1.12,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1.16,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1.18,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.42,
+          "output": {
+            "value": 100,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.66,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.66,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.51,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 1.02,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1.06,
+          "plan": {
+            "operation": "max",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1.07,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.29,
+          "output": {
+            "value": 8,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.5,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.51,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.44,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.94,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.98,
+          "plan": {
+            "operation": "min",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.99,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.21,
+          "output": {
+            "value": 10,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.43,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.43,
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.53,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.9,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.95,
+          "plan": {
+            "operation": "median",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.96,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.25,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.52,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.52,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.19,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.89,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.92,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.93,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.06,
+          "output": {
+            "value": 4,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.18,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": []
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.18,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.35,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.89,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.93,
+          "plan": {
+            "operation": "mean",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.94,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.14,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.34,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.35,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 0.89,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.85,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.88,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 0.88,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 0.9,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.86,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.89,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 0.89,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 1,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 0.91,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.87,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.9,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 0.9,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.28,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.86,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.89,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.9,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.09,
+          "output": {
+            "value": 100,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.27,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.27,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.3,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.85,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.89,
+          "plan": {
+            "operation": "max",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.9,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.1,
+          "output": {
+            "value": 8,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.29,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.29,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.33,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.9,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.94,
+          "plan": {
+            "operation": "min",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.95,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.14,
+          "output": {
+            "value": 10,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.32,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.33,
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.43,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.83,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.86,
+          "plan": {
+            "operation": "median",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.87,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.15,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.42,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.43,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.34,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.97,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1.01,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1.02,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.19,
+          "output": {
+            "value": 4,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.32,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": []
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.33,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1.37,
+      "tokens": 0,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.9,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.93,
+          "plan": {
+            "operation": "mean",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": []
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 0.95,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1.15,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1.35,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1.36,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 0.91,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.87,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.9,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 0.91,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 0.9,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.86,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.89,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 0.89,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "mode": "E3_offline_pilot",
+      "repeat": 2,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 0.9,
+      "tokens": 0,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 0.86,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 0.89,
+          "plan": {
+            "clarification": "Which exact metric and column should I use?"
+          },
+          "provider": "heuristic"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 0.89,
+          "question": "Which exact metric and column should I use?"
+        }
+      ]
+    }
+  ],
+  "accuracy_mean": 1,
+  "accuracy_std": 0.0
+}

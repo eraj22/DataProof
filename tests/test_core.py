@@ -1,0 +1,33 @@
+import unittest
+import pandas as pd
+from dataproof.core import AnalysisError, Config, execute_plan, run, validate_plan, verify
+
+
+class CoreTests(unittest.TestCase):
+    def setUp(self):
+        self.frame = pd.DataFrame({"region": ["A", "B", "A"], "sales": [10, 20, 30]})
+
+    def test_filter_and_sum(self):
+        plan = {"operation": "sum", "column": "sales", "filters": [{"column": "region", "op": "eq", "value": "A"}], "group_by": []}
+        out = execute_plan(plan, self.frame)
+        self.assertEqual(out["value"], 40)
+        self.assertEqual(out["rows_used"], 2)
+        self.assertTrue(verify(plan, self.frame, out)["passed"])
+
+    def test_reject_unknown_column(self):
+        with self.assertRaises(AnalysisError):
+            validate_plan({"operation": "sum", "column": "profit"}, self.frame)
+
+    def test_detect_corrupt_output(self):
+        plan = {"operation": "sum", "column": "sales"}
+        self.assertFalse(verify(plan, self.frame, {"value": 999, "rows_used": 3})["passed"])
+
+    def test_offline_pipeline_and_clarification(self):
+        answer = run("What is the average sales?", self.frame, Config(provider="heuristic"))
+        self.assertEqual(answer["answer"], 20)
+        self.assertEqual(answer["status"], "answered")
+        self.assertEqual(run("What changed?", self.frame, Config(provider="heuristic"))["status"], "clarify")
+
+
+if __name__ == "__main__":
+    unittest.main()

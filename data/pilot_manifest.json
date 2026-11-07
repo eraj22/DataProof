@@ -1,0 +1,14 @@
+[
+  {"id":"p01","split":"dev","file":"pilot.csv","question":"What is the average sales?","expected":25.0,"status":"answered"},
+  {"id":"p02","split":"dev","file":"pilot.csv","question":"What is the total units?","expected":20,"status":"answered"},
+  {"id":"p03","split":"dev","file":"pilot.csv","question":"What changed?","expected":null,"status":"clarify"},
+  {"id":"p04","split":"test","file":"pilot.csv","question":"What is the total sales?","expected":100,"status":"answered"},
+  {"id":"p05","split":"test","file":"pilot.csv","question":"What is the maximum units?","expected":8,"status":"answered"},
+  {"id":"p06","split":"test","file":"pilot.csv","question":"What is the minimum sales?","expected":10,"status":"answered"},
+  {"id":"p07","split":"test","file":"pilot.csv","question":"What is the median units?","expected":5.0,"status":"answered"},
+  {"id":"p08","split":"test","file":"pilot.csv","question":"How many rows are there?","expected":4,"status":"answered"},
+  {"id":"p09","split":"test","file":"pilot.csv","question":"What is the average units?","expected":5.0,"status":"answered"},
+  {"id":"p10","split":"test","file":"pilot.csv","question":"What is the total sales for a particular region?","expected":null,"status":"clarify"},
+  {"id":"p11","split":"test","file":"pilot.csv","question":"What is the growth rate?","expected":null,"status":"clarify"},
+  {"id":"p12","split":"test","file":"pilot.csv","question":"What is the usual amount?","expected":null,"status":"clarify"}
+]
