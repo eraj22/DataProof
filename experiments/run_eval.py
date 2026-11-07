@@ -22,6 +22,7 @@ def main():
     ap.add_argument("--mode", choices=list(MODES), required=True)
     ap.add_argument("--split", choices=["dev", "test"], default="test")
     ap.add_argument("--repeats", type=int, default=3)
+    ap.add_argument("--request-delay", type=float, default=4.0, help="Seconds between Groq requests to respect token limits")
     ap.add_argument("--output", required=True)
     args = ap.parse_args()
     if args.repeats < 1:
@@ -42,6 +43,8 @@ def main():
                          "status": result["status"], "correct": int(correct), "latency_ms": round((time.perf_counter()-t0)*1000, 2),
                          "tokens": result["usage"].get("total_tokens", 0), "tool_calls": sum(t["state"] == "execute" for t in result["trace"]),
                          "trace": result["trace"]})
+            if MODES[args.mode].provider == "groq":
+                time.sleep(args.request_delay)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps({"manifest": args.manifest, "mode": args.mode, "split": args.split, "rows": rows,

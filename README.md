@@ -31,7 +31,7 @@ $env:GROQ_API_KEY = "your-key-stored-locally"
 python -m dataproof.web
 ```
 
-Open `http://127.0.0.1:8000`. Do not commit `.env`, API keys, uploads, or private traces. Configure `GROQ_MODEL` to an available Groq model; default is `llama-3.3-70b-versatile`. Temperature is zero. API availability and model names should be checked before final runs. Local CSV/XLSX is limited to 20 MB upload, 100,000 rows, and 100 columns. The server binds to localhost by default and is meant for local development, not public deployment.
+Open `http://127.0.0.1:8000`. Do not commit `.env`, API keys, uploads, or private traces. Configure `GROQ_MODEL` to an available Groq model; default is `openai/gpt-oss-20b`, available on the account during the 2026-11-07 development check. Temperature is zero. API availability and model names should be checked before final runs. Local CSV/XLSX is limited to 20 MB upload, 100,000 rows, and 100 columns. The server binds to localhost by default and is meant for local development, not public deployment.
 
 ## Architecture and gap components
 
@@ -59,6 +59,8 @@ python experiments/run_eval.py --manifest data/pilot_manifest.json --mode E3_off
 
 Groq experiments can use the same manifest and `--mode E3`, `E5_no_contract`, `E5_no_verifier`, or `E5_no_abstention`. The script stores task-level status, correctness, latency, token count, tool calls, and traces. E1 uses `--mode E1`. Run development tasks first, freeze prompts and settings, then run the untouched test split. A proper DSBench task manifest and downloaded data are still required; the synthetic pilot is not comparable with the DSBench paper. The DSBench authors provide processed data separately: <https://github.com/LiqiangJing/DSBench/tree/main/data_analysis>. Respect their dataset rights notice.
 
+After the five saved pilot runs, create the compact efficiency table with `python experiments/summarize.py`. It writes `results/pilot_summary.csv` from the task-level JSON files; it does not run the model again.
+
 ## Experiment status
 
 | Required experiment | Status |
@@ -70,7 +72,17 @@ Groq experiments can use the same manifest and `--mode E3`, `E5_no_contract`, `E
 | E5 ablation | Switches and runner exist; meaningful final ablation pending |
 | E6 efficiency and reliability | Per-task logging exists; final analysis pending |
 
-The saved `results/offline_pilot.json` has 9/9 correct classifications or values on a deliberately easy synthetic test split, repeated three times (mean 1.00, standard deviation 0.00). This is a software smoke test, not evidence of generalization. The repeated runs are deterministic and therefore do not satisfy the spirit of stochastic repeated Groq evaluation.
+The fixed synthetic test split contains nine tasks and is deliberately easy. Its measured results on 2026-11-07 are below. Each configuration ran three times; the accuracy standard deviation was 0.00 in each case. `openai/gpt-oss-20b` was used through Groq with temperature 0. The no-contract run was repeated after two rate-limit errors in its first attempt; the saved file contains only the paced rerun. These results are software pilot evidence, not evidence of DSBench performance or generalization.
+
+| Pilot configuration | Correct per run | Mean accuracy | Total tokens / 27 runs | Mean task latency |
+|---|---:|---:|---:|---:|
+| E1 offline heuristic baseline | 6/9 | 0.667 | 0 | 2 ms |
+| E3 full Groq system | 9/9 | 1.000 | 12,756 | 1,405 ms |
+| E5 without contract instruction | 8/9 | 0.889 | 12,561 | 757 ms |
+| E5 without verifier | 9/9 | 1.000 | 12,624 | 2,497 ms |
+| E5 without abstention control | 6/9 | 0.667 | 12,709 | 1,939 ms |
+
+The no-verifier score matching the full score means this pilot does not demonstrate a verifier benefit. All selected numeric questions were simple enough for the executor to solve; there were no natural wrong-output cases for it to catch. The three ambiguous questions drive the abstention difference. The pilot's easy task selection and repeated deterministic outputs are major validity limits.
 
 ## Gap-resolution table
 

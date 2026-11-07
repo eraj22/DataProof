@@ -1,0 +1,1566 @@
+{
+  "manifest": "data\\pilot_manifest.json",
+  "mode": "E5_no_verifier",
+  "split": "test",
+  "rows": [
+    {
+      "id": "p04",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 576.7,
+      "tokens": 430,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.33,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 575.39,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 575.48,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 576.65,
+          "output": {
+            "value": 100,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 576.67,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 576.68,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 518.81,
+      "tokens": 429,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.45,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 517.44,
+          "plan": {
+            "operation": "max",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 517.53,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 518.74,
+          "output": {
+            "value": 8,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 518.77,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 518.77,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 753.31,
+      "tokens": 428,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.66,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 751.94,
+          "plan": {
+            "operation": "min",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 752.04,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 753.24,
+          "output": {
+            "value": 10,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 753.26,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 753.27,
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 456.49,
+      "tokens": 430,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.81,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 454.05,
+          "plan": {
+            "operation": "median",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 454.14,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 456.43,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 456.45,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 456.45,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 402.26,
+      "tokens": 482,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.36,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 401.43,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 401.49,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 402.2,
+          "output": {
+            "value": 4,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 402.22,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 402.23,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 815.12,
+      "tokens": 428,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.73,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 813.83,
+          "plan": {
+            "operation": "mean",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 813.92,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 815.06,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 815.08,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 815.09,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 2041.74,
+      "tokens": 562,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.52,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2041.67,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which region would you like the total sales for?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 2041.7,
+          "question": "Which region would you like the total sales for?"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 3994.25,
+      "tokens": 423,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.01,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3994.18,
+          "plan": {
+            "operation": "",
+            "column": "",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which metric's growth rate are you interested in (e.g., sales, units) and over what time period or grouping should it be calculated?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 3994.21,
+          "question": "Which metric's growth rate are you interested in (e.g., sales, units) and over what time period or grouping should it be calculated?"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 4395.43,
+      "tokens": 624,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.03,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 4395.35,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which metric and grouping would you like to analyze?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 4395.38,
+          "question": "Which metric and grouping would you like to analyze?"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3809.92,
+      "tokens": 456,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.66,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3808.4,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3808.53,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3809.82,
+          "output": {
+            "value": 100,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3809.86,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3809.87,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3656.59,
+      "tokens": 429,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.18,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3655.14,
+          "plan": {
+            "operation": "max",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3655.26,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3656.52,
+          "output": {
+            "value": 8,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3656.55,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3656.55,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 914.37,
+      "tokens": 428,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.36,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 912.97,
+          "plan": {
+            "operation": "min",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 913.06,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 914.29,
+          "output": {
+            "value": 10,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 914.32,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 914.33,
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3600.51,
+      "tokens": 430,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.1,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3599.76,
+          "plan": {
+            "operation": "median",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3599.8,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3600.48,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3600.49,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3600.49,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 700.28,
+      "tokens": 482,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 1.52,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 699.73,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 699.77,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 700.25,
+          "output": {
+            "value": 4,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 700.26,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 700.26,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3883.45,
+      "tokens": 430,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 2.32,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3882.09,
+          "plan": {
+            "operation": "mean",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3882.23,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3883.39,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3883.41,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3883.42,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 2040.76,
+      "tokens": 562,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.78,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 2040.7,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which region would you like the total sales for?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 2040.73,
+          "question": "Which region would you like the total sales for?"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 3694.58,
+      "tokens": 423,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.67,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3694.52,
+          "plan": {
+            "operation": "",
+            "column": "",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which metric's growth rate are you interested in (e.g., sales, units) and over what time period or grouping should it be calculated?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 3694.55,
+          "question": "Which metric's growth rate are you interested in (e.g., sales, units) and over what time period or grouping should it be calculated?"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 1,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 715.3,
+      "tokens": 572,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.17,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 715.23,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which metric and grouping would you like to analyze?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 715.26,
+          "question": "Which metric and grouping would you like to analyze?"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 5101.62,
+      "tokens": 438,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 5.02,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 5100.28,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 5100.38,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 5101.56,
+          "output": {
+            "value": 100,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 5101.58,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 5101.59,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1978.24,
+      "tokens": 428,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.63,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1976.82,
+          "plan": {
+            "operation": "max",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1976.92,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1978.18,
+          "output": {
+            "value": 8,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1978.2,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1978.21,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 4360.28,
+      "tokens": 428,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.3,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 4358.84,
+          "plan": {
+            "operation": "min",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 4358.94,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 4360.21,
+          "output": {
+            "value": 10,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 4360.23,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 4360.24,
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1736.46,
+      "tokens": 430,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.7,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1734.82,
+          "plan": {
+            "operation": "median",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1734.91,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1736.4,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1736.42,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1736.43,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 3884.73,
+      "tokens": 482,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.6,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3883.93,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3883.99,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3884.68,
+          "output": {
+            "value": 4,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3884.7,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3884.7,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 4027.27,
+      "tokens": 428,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.74,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 4025.82,
+          "plan": {
+            "operation": "mean",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 4025.93,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 4027.21,
+          "output": {
+            "value": 5.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 4027.23,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "disabled": true
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 4027.24,
+          "value": 5.0
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 4054.13,
+      "tokens": 547,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.64,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 4054.07,
+          "plan": {
+            "operation": "sum",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which region would you like the total sales for?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 4054.1,
+          "question": "Which region would you like the total sales for?"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 817.92,
+      "tokens": 423,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.26,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 817.85,
+          "plan": {
+            "operation": "",
+            "column": "",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which metric's growth rate are you interested in (e.g., sales or units), and over what time period or grouping should it be calculated?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 817.89,
+          "question": "Which metric's growth rate are you interested in (e.g., sales or units), and over what time period or grouping should it be calculated?"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "mode": "E5_no_verifier",
+      "repeat": 2,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 4495.78,
+      "tokens": 572,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.92,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 4495.7,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which metric and grouping would you like to analyze?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 4495.74,
+          "question": "Which metric and grouping would you like to analyze?"
+        }
+      ]
+    }
+  ],
+  "accuracy_mean": 1,
+  "accuracy_std": 0.0
+}

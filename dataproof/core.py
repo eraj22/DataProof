@@ -118,19 +118,20 @@ def groq_json(messages, model=None):
     key = os.environ.get("GROQ_API_KEY")
     if not key:
         raise AnalysisError("Set GROQ_API_KEY in the local environment.")
-    body = json.dumps({"model": model or os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
+    body = json.dumps({"model": model or os.getenv("GROQ_MODEL", "openai/gpt-oss-20b"),
                        "messages": messages, "temperature": 0, "response_format": {"type": "json_object"}}).encode()
     req = urllib.request.Request("https://api.groq.com/openai/v1/chat/completions", body,
-            {"Authorization": "Bearer " + key, "Content-Type": "application/json"})
-    for attempt in range(3):
+            {"Authorization": "Bearer " + key, "Content-Type": "application/json", "User-Agent": "DataProof/0.1"})
+    for attempt in range(6):
         try:
             with urllib.request.urlopen(req, timeout=45) as res:
                 data = json.load(res)
             return json.loads(data["choices"][0]["message"]["content"]), data.get("usage", {})
         except urllib.error.HTTPError as exc:
-            if exc.code not in {429, 500, 502, 503, 504} or attempt == 2:
-                raise AnalysisError("Groq HTTP error " + str(exc.code)) from exc
-            time.sleep(2 ** attempt)
+            if exc.code not in {429, 500, 502, 503, 504} or attempt == 5:
+                detail = "rate limit or service unavailable" if exc.code in {429, 500, 502, 503, 504} else exc.read(300).decode("utf-8", "replace")
+                raise AnalysisError("Groq HTTP error " + str(exc.code) + ": " + detail) from exc
+            time.sleep(min(2 ** (attempt + 1), 20))
         except (urllib.error.URLError, KeyError, json.JSONDecodeError) as exc:
             raise AnalysisError("Groq request failed: " + str(exc)) from exc
 
@@ -195,6 +196,7 @@ def run(question, frame, config=None):
         return {"status": "answered", "answer": output["value"], "evidence": verdict,
                 "plan": plan, "rows_used": output["rows_used"], "trace": trace, "usage": usage}
     except (AnalysisError, KeyError, TypeError, ValueError) as exc:
-        state = "abstain" if config.abstention else "error"
+        provider_error = str(exc).startswith("Groq ") or str(exc).startswith("Set GROQ_API_KEY")
+        state = "error" if provider_error or not config.abstention else "abstain"
         event(state, reason=str(exc))
-        return {"status": "abstained" if config.abstention else "error", "answer": str(exc), "trace": trace, "usage": usage}
+        return {"status": "error" if state == "error" else "abstained", "answer": str(exc), "trace": trace, "usage": usage}

@@ -1,0 +1,6 @@
+file,mode,tasks,repeats,accuracy_mean,accuracy_std,latency_ms_mean,tokens_total,tool_calls_total,errors,clarifications
+baseline_pilot.json,E1,9,3,0.6666666666666666,0.0,1.52,0,18,9,0
+groq_pilot.json,E3,9,3,1,0.0,1404.92,12756,18,0,9
+no_contract_pilot.json,E5_no_contract,9,3,0.8888888888888888,0.0,757.25,12561,21,0,6
+no_verifier_pilot.json,E5_no_verifier,9,3,1,0.0,2497.27,12624,18,0,9
+no_abstention_pilot.json,E5_no_abstention,9,3,0.6666666666666666,0.0,1939.31,12709,18,9,0

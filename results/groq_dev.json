@@ -1,0 +1,192 @@
+{
+  "manifest": "data\\pilot_manifest.json",
+  "mode": "E3",
+  "split": "dev",
+  "rows": [
+    {
+      "id": "p01",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1153.74,
+      "tokens": 449,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.22,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1150.92,
+          "plan": {
+            "operation": "mean",
+            "column": "sales",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1151.03,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1152.62,
+          "output": {
+            "value": 25.0,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1153.69,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1153.71,
+          "value": 25.0
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 861.27,
+      "tokens": 424,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.35,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 858.93,
+          "plan": {
+            "operation": "sum",
+            "column": "units",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 859.05,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 860.29,
+          "output": {
+            "value": 20,
+            "rows_used": 4,
+            "input_rows": 4
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 861.2,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 4,
+              "source_columns": [
+                "units"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 861.22,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 700.7,
+      "tokens": 577,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 4.27,
+          "rows": 4,
+          "columns": [
+            "region",
+            "sales",
+            "units"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 700.57,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "What metric or comparison are you interested in?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 700.66,
+          "question": "What metric or comparison are you interested in?"
+        }
+      ]
+    }
+  ],
+  "accuracy_mean": 1,
+  "accuracy_std": null
+}
