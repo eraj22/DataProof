@@ -1,5 +1,27 @@
 # Submission checklist
 
+## Files to upload to Google Classroom
+
+Replace `<ProjectCode>` with the assigned code before uploading:
+
+1. `Phase2_<ProjectCode>_22I-1296_Paper.pdf` - the final student-written 8-10 page paper.
+2. `Phase2_<ProjectCode>_22I-1296_Similarity.pdf` - the official Turnitin similarity report generated from that exact PDF.
+3. `Phase2_<ProjectCode>_22I-1296_AIReport.pdf` - the official Turnitin AI-writing report generated from the same PDF.
+4. `Phase2_<ProjectCode>_22I-1296_Paper_Source.zip` - the final LaTeX/Overleaf source and bibliography.
+
+Also paste these links into the submission:
+
+- Repository: <https://github.com/eraj22/DataProof>
+- Final tag: <https://github.com/eraj22/DataProof/releases/tag/phase2-final>
+
+## Prepared teaching materials
+
+- `output/pdf/Phase2_DataProof_Teaching_Exemplar.pdf` is a nine-page teaching exemplar. It is visibly labelled as AI-generated and is **not a submission-ready student paper**.
+- `output/source/Phase2_DataProof_Teaching_Exemplar_Source.zip` contains its reproducible ReportLab builder, LaTeX skeleton, bibliography, and instructions.
+- Rewrite and verify the paper, insert the assigned project code, rename the final files using the pattern above, and then generate both official Turnitin reports.
+
+## Project readiness
+
 - [x] End-to-end agentic pipeline and local web interface.
 - [x] Three identifiable, switchable gap components.
 - [x] Data/API interaction and JSON trajectories.

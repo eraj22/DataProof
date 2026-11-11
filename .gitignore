@@ -7,3 +7,4 @@ results/private_*.json
 results/private_*.csv
 data/uploads/
 data/dsbench_derived/*.csv
+tmp/
