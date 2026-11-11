@@ -1,0 +1,6 @@
+configuration,result_file,unique_tasks,repeats,accuracy_mean,accuracy_std,latency_ms_mean,tokens_total,tool_calls_total,error_statuses,provider_errors
+E1 heuristic baseline,E1_dsbench_derived.json,54,3,0.6296296296296297,0.0,12.277407407407408,0,108,54,0
+E3 DataProof,E3_dsbench_derived.json,54,3,0.95679012345679,0.010691671651659719,2375.259814814815,146402,122,0,0
+Pilot no contract,no_contract_pilot.json,9,3,0.8888888888888888,0.0,757.2533333333333,12561,21,0,0
+Pilot no verifier,no_verifier_pilot.json,9,3,1,0.0,2497.2703703703705,12624,18,0,0
+Pilot no abstention,no_abstention_pilot.json,9,3,0.6666666666666666,0.0,1939.3140740740741,12709,18,9,0

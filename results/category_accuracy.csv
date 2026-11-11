@@ -1,0 +1,10 @@
+category,runs,accuracy
+ambiguous_metric,18,1
+count,18,0.8333333333333334
+filtered_sum,18,0.8333333333333334
+max,18,1
+mean,18,1
+median,18,1
+min,18,1
+missing_comparison,18,1
+sum,18,0.9444444444444444

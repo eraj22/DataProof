@@ -1,0 +1,982 @@
+[
+  {
+    "id": "dsd001",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the average Turn number?",
+    "expected": 2500.5,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "Turn number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd002",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the total Turn number?",
+    "expected": 12502500,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Turn number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd003",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the maximum Game number?",
+    "expected": 2500,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "Game number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd004",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the minimum Game number?",
+    "expected": 1,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "Game number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd005",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the median Turn number?",
+    "expected": 2500.5,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "Turn number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd006",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "How many rows are there?",
+    "expected": 5000,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd007",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the total Turn number where Game number is greater than 1250.5?",
+    "expected": 9376250,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Turn number",
+      "filters": [
+        {
+          "column": "Game number",
+          "op": "gt",
+          "value": 1250.5
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd008",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd009",
+    "split": "dev",
+    "file": "table_01.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000005"
+  },
+  {
+    "id": "dsd010",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the average Invoice Number?",
+    "expected": 1709.5712,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "Invoice Number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd011",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the total Invoice Number?",
+    "expected": 8547856,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Invoice Number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd012",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the maximum Item Code?",
+    "expected": 50,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "Item Code",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd013",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the minimum Item Code?",
+    "expected": 1,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "Item Code",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd014",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the median Invoice Number?",
+    "expected": 1703.5,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "Invoice Number",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd015",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "How many rows are there?",
+    "expected": 5000,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd016",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the total Invoice Number where Item Code is greater than 25.0?",
+    "expected": 4266731,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Invoice Number",
+      "filters": [
+        {
+          "column": "Item Code",
+          "op": "gt",
+          "value": 25.0
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd017",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd018",
+    "split": "validation",
+    "file": "table_02.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000034"
+  },
+  {
+    "id": "dsd019",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the average Voter ID?",
+    "expected": 540504.886,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "Voter ID",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd020",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the total Voter ID?",
+    "expected": 540504886,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Voter ID",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd021",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the maximum Age?",
+    "expected": 70,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "Age",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd022",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the minimum Age?",
+    "expected": 18,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "Age",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd023",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the median Voter ID?",
+    "expected": 530036.5,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "Voter ID",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd024",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "How many rows are there?",
+    "expected": 1000,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd025",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the total Voter ID where Age is greater than 46.0?",
+    "expected": 263053142,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Voter ID",
+      "filters": [
+        {
+          "column": "Age",
+          "op": "gt",
+          "value": 46.0
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd026",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd027",
+    "split": "test",
+    "file": "table_03.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000006"
+  },
+  {
+    "id": "dsd028",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the average Voter ID?",
+    "expected": 540504.886,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "Voter ID",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd029",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the total Voter ID?",
+    "expected": 540504886,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Voter ID",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd030",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the maximum Age?",
+    "expected": 70,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "Age",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd031",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the minimum Age?",
+    "expected": 18,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "Age",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd032",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the median Voter ID?",
+    "expected": 530036.5,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "Voter ID",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd033",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "How many rows are there?",
+    "expected": 1000,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd034",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the total Voter ID where Age is greater than 46.0?",
+    "expected": 263053142,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Voter ID",
+      "filters": [
+        {
+          "column": "Age",
+          "op": "gt",
+          "value": 46.0
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd035",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd036",
+    "split": "test",
+    "file": "table_04.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000007"
+  },
+  {
+    "id": "dsd037",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the average 180.0?",
+    "expected": 671.2029166666667,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "180.0",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd038",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the total 180.0?",
+    "expected": 16108.87,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "180.0",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd039",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the maximum 187.2?",
+    "expected": 648.96,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "187.2",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd040",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the minimum 187.2?",
+    "expected": -200.0,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "187.2",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd041",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the median 180.0?",
+    "expected": 0.5,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "180.0",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd042",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "How many rows are there?",
+    "expected": 24,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd043",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the total 180.0 where 187.2 is greater than 0.10500000000000001?",
+    "expected": 968.59,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "180.0",
+      "filters": [
+        {
+          "column": "187.2",
+          "op": "gt",
+          "value": 0.10500000000000001
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd044",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd045",
+    "split": "test",
+    "file": "table_05.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000029"
+  },
+  {
+    "id": "dsd046",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the average Number of Small systems installed?",
+    "expected": 68.25,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "Number of Small systems installed",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd047",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the total Number of Small systems installed?",
+    "expected": 1638,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Number of Small systems installed",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd048",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the maximum Number of Large systems installed?",
+    "expected": 67,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "Number of Large systems installed",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd049",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the minimum Number of Large systems installed?",
+    "expected": 33,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "Number of Large systems installed",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd050",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the median Number of Small systems installed?",
+    "expected": 71.0,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "Number of Small systems installed",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd051",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "How many rows are there?",
+    "expected": 24,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd052",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the total Number of Small systems installed where Number of Large systems installed is greater than 55.5?",
+    "expected": 996,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "Number of Small systems installed",
+      "filters": [
+        {
+          "column": "Number of Large systems installed",
+          "op": "gt",
+          "value": 55.5
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd053",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd054",
+    "split": "test",
+    "file": "table_06.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000038"
+  },
+  {
+    "id": "dsd055",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the average List of Teams?",
+    "expected": 10.5,
+    "status": "answered",
+    "category": "mean",
+    "oracle_plan": {
+      "operation": "mean",
+      "column": "List of Teams",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd056",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the total List of Teams?",
+    "expected": 210.0,
+    "status": "answered",
+    "category": "sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "List of Teams",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd057",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the maximum Your Ladder - For Check Sum Calculation?",
+    "expected": 20.0,
+    "status": "answered",
+    "category": "max",
+    "oracle_plan": {
+      "operation": "max",
+      "column": "Your Ladder - For Check Sum Calculation",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd058",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the minimum Your Ladder - For Check Sum Calculation?",
+    "expected": 1.0,
+    "status": "answered",
+    "category": "min",
+    "oracle_plan": {
+      "operation": "min",
+      "column": "Your Ladder - For Check Sum Calculation",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd059",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the median List of Teams?",
+    "expected": 10.5,
+    "status": "answered",
+    "category": "median",
+    "oracle_plan": {
+      "operation": "median",
+      "column": "List of Teams",
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd060",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "How many rows are there?",
+    "expected": 23,
+    "status": "answered",
+    "category": "count",
+    "oracle_plan": {
+      "operation": "count",
+      "column": null,
+      "filters": [],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd061",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the total List of Teams where Your Ladder - For Check Sum Calculation is greater than 10.0?",
+    "expected": 144.0,
+    "status": "answered",
+    "category": "filtered_sum",
+    "oracle_plan": {
+      "operation": "sum",
+      "column": "List of Teams",
+      "filters": [
+        {
+          "column": "Your Ladder - For Check Sum Calculation",
+          "op": "gt",
+          "value": 10.0
+        }
+      ],
+      "group_by": []
+    },
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd062",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What is the average value?",
+    "expected": null,
+    "status": "clarify",
+    "category": "ambiguous_metric",
+    "oracle_plan": null,
+    "source_competition": "00000010"
+  },
+  {
+    "id": "dsd063",
+    "split": "validation",
+    "file": "table_07.csv",
+    "question": "What changed in this dataset?",
+    "expected": null,
+    "status": "clarify",
+    "category": "missing_comparison",
+    "oracle_plan": null,
+    "source_competition": "00000010"
+  }
+]

@@ -28,6 +28,19 @@ class CoreTests(unittest.TestCase):
         self.assertEqual(answer["status"], "answered")
         self.assertEqual(run("What changed?", self.frame, Config(provider="heuristic"))["status"], "clarify")
 
+    def test_row_count_includes_missing_values(self):
+        frame = pd.DataFrame({"a": [1, None, 3], "b": [None, 2, 3]})
+        out = execute_plan({"operation": "count", "column": None}, frame)
+        self.assertEqual(out["value"], 3)
+
+    def test_nullable_model_list_fields_are_normalized(self):
+        plan = {"operation": "sum", "column": "sales", "filters": None, "group_by": None,
+                "assumptions": "missing values are ignored"}
+        validate_plan(plan, self.frame)
+        self.assertEqual(plan["filters"], [])
+        self.assertEqual(plan["group_by"], [])
+        self.assertEqual(plan["assumptions"], ["missing values are ignored"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -20,7 +20,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--manifest", required=True, help="JSON list of id,split,file,question,expected,status")
     ap.add_argument("--mode", choices=list(MODES), required=True)
-    ap.add_argument("--split", choices=["dev", "test"], default="test")
+    ap.add_argument("--split", choices=["dev", "validation", "test"], default="test")
     ap.add_argument("--repeats", type=int, default=3)
     ap.add_argument("--request-delay", type=float, default=4.0, help="Seconds between Groq requests to respect token limits")
     ap.add_argument("--output", required=True)

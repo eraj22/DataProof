@@ -1,0 +1,183 @@
+[
+  {
+    "file": "table_01.csv",
+    "competition_id": "00000005",
+    "workbook": "MO16-Round-1-Sec-3-Roll-The-Dice-1.xlsx",
+    "sheet": "Data",
+    "header_row_zero_based": 8,
+    "rows": 5000,
+    "columns": [
+      "Turn number",
+      "Game number",
+      "Roll 1",
+      "Roll 2",
+      "Roll 3",
+      "Roll 4",
+      "Roll 5",
+      "Roll 6"
+    ],
+    "numeric_columns_used": [
+      "Turn number",
+      "Game number"
+    ]
+  },
+  {
+    "file": "table_02.csv",
+    "competition_id": "00000034",
+    "workbook": "MO13-Data-Analysis-Data-Workbook.xlsx",
+    "sheet": "Sheet1",
+    "header_row_zero_based": 0,
+    "rows": 5000,
+    "columns": [
+      "Date",
+      "Invoice Number",
+      "Item Code",
+      "Sales Person",
+      "Manager On Duty",
+      "Ticket Price Price Per Unit",
+      "Discount Given",
+      "Sales Price Per Unit",
+      "Cost per Unit",
+      "Quantity",
+      "Postal Code"
+    ],
+    "numeric_columns_used": [
+      "Invoice Number",
+      "Item Code"
+    ]
+  },
+  {
+    "file": "table_03.csv",
+    "competition_id": "00000006",
+    "workbook": "MO16-Round-2-Sec-3-Tally-Up-1.xlsx",
+    "sheet": "Data",
+    "header_row_zero_based": 7,
+    "rows": 1000,
+    "columns": [
+      "District",
+      "Start",
+      "End",
+      "column_6",
+      "Voter ID",
+      "Age",
+      "District Code",
+      "column_10",
+      "Red",
+      "Orange",
+      "Yellow",
+      "Green",
+      "Blue",
+      "Purple",
+      "Brown",
+      "Black"
+    ],
+    "numeric_columns_used": [
+      "Voter ID",
+      "Age"
+    ]
+  },
+  {
+    "file": "table_04.csv",
+    "competition_id": "00000007",
+    "workbook": "MO16-Round-2-Sec-3-Tally-Up-1.xlsx",
+    "sheet": "Data",
+    "header_row_zero_based": 7,
+    "rows": 1000,
+    "columns": [
+      "District",
+      "Start",
+      "End",
+      "column_6",
+      "Voter ID",
+      "Age",
+      "District Code",
+      "column_10",
+      "Red",
+      "Orange",
+      "Yellow",
+      "Green",
+      "Blue",
+      "Purple",
+      "Brown",
+      "Black"
+    ],
+    "numeric_columns_used": [
+      "Voter ID",
+      "Age"
+    ]
+  },
+  {
+    "file": "table_05.csv",
+    "competition_id": "00000029",
+    "workbook": "MO14-Stepping-Up.xlsx",
+    "sheet": "Inputs",
+    "header_row_zero_based": 64,
+    "rows": 24,
+    "columns": [
+      "180.0",
+      "187.2",
+      "194.688",
+      "200.52864",
+      "206.5444992",
+      "212.740834176",
+      "219.12305920128",
+      "225.6967509773184",
+      "232.467653506638",
+      "239.4416831118371",
+      "246.6249336051923",
+      "254.023681613348",
+      "261.6443920617485",
+      "269.4937238236009",
+      "277.578535538309"
+    ],
+    "numeric_columns_used": [
+      "180.0",
+      "187.2"
+    ]
+  },
+  {
+    "file": "table_06.csv",
+    "competition_id": "00000038",
+    "workbook": "MO13-Energy-Operations-Workbook.xlsx",
+    "sheet": "Assumptions",
+    "header_row_zero_based": 35,
+    "rows": 24,
+    "columns": [
+      "Month",
+      "Number of Small systems installed",
+      "Number of Large systems installed",
+      "1.00 AUD:USD.\n 1 AUD is equal to:",
+      "1.00 USD: AUD.\n1 USD is equal to:"
+    ],
+    "numeric_columns_used": [
+      "Number of Small systems installed",
+      "Number of Large systems installed"
+    ]
+  },
+  {
+    "file": "table_07.csv",
+    "competition_id": "00000010",
+    "workbook": "MO2017-Finals-Sec-1-Ladder-Up.xlsx",
+    "sheet": "Check_Sum",
+    "header_row_zero_based": 0,
+    "rows": 23,
+    "columns": [
+      "List of Teams",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Your Ladder - For Check Sum Calculation",
+      "Unnamed: 4",
+      "Unnamed: 5",
+      "Unnamed: 6",
+      "Unnamed: 7",
+      "D",
+      "E",
+      "D3",
+      "E3"
+    ],
+    "numeric_columns_used": [
+      "List of Teams",
+      "Your Ladder - For Check Sum Calculation"
+    ]
+  }
+]

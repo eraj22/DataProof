@@ -1,0 +1,638 @@
+{
+  "manifest": "data\\dsbench_derived\\manifest.json",
+  "mode": "E3",
+  "split": "dev",
+  "rows": [
+    {
+      "id": "dsd001",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1635.28,
+      "tokens": 608,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 16.43,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1631.66,
+          "plan": {
+            "operation": "mean",
+            "column": "Turn number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1631.75,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1633.76,
+          "output": {
+            "value": 2500.5,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1635.23,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Turn number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1635.24,
+          "value": 2500.5
+        }
+      ]
+    },
+    {
+      "id": "dsd002",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1320.51,
+      "tokens": 622,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 3.8,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1317.84,
+          "plan": {
+            "operation": "sum",
+            "column": "Turn number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1317.91,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1319.13,
+          "output": {
+            "value": 12502500,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1320.46,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Turn number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1320.47,
+          "value": 12502500
+        }
+      ]
+    },
+    {
+      "id": "dsd003",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 586.85,
+      "tokens": 609,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 6.15,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 583.03,
+          "plan": {
+            "operation": "max",
+            "column": "Game number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 583.11,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 585.07,
+          "output": {
+            "value": 2500,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 586.79,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Game number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 586.81,
+          "value": 2500
+        }
+      ]
+    },
+    {
+      "id": "dsd004",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 783.37,
+      "tokens": 585,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 17.49,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 778.16,
+          "plan": {
+            "operation": "min",
+            "column": "Game number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 778.28,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 780.8,
+          "output": {
+            "value": 1,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 783.29,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Game number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 783.31,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "dsd005",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 646.0,
+      "tokens": 610,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 10.35,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 639.63,
+          "plan": {
+            "operation": "median",
+            "column": "Turn number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 639.76,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 643.44,
+          "output": {
+            "value": 2500.5,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 645.94,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Turn number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 645.96,
+          "value": 2500.5
+        }
+      ]
+    },
+    {
+      "id": "dsd006",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 1269.05,
+      "tokens": 685,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 5.37,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1264.42,
+          "plan": {
+            "operation": "count",
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 1264.54,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 1266.88,
+          "output": {
+            "value": 5000,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 1268.96,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": []
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 1269.0,
+          "value": 5000
+        }
+      ]
+    },
+    {
+      "id": "dsd007",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "answered",
+      "correct": 1,
+      "latency_ms": 831.5,
+      "tokens": 678,
+      "tool_calls": 1,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 8.13,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 799.73,
+          "plan": {
+            "operation": "sum",
+            "column": "Turn number",
+            "filters": [
+              {
+                "column": "Game number",
+                "op": "gt",
+                "value": 1250.5
+              }
+            ],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 799.88,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 826.72,
+          "output": {
+            "value": 9376250,
+            "rows_used": 2500,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 831.42,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 2500,
+              "source_columns": [
+                "Game number",
+                "Turn number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 831.45,
+          "value": 9376250
+        }
+      ]
+    },
+    {
+      "id": "dsd008",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 906.33,
+      "tokens": 783,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 10.87,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 906.29,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which column's average would you like?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 906.3,
+          "question": "Which column's average would you like?"
+        }
+      ]
+    },
+    {
+      "id": "dsd009",
+      "split": "dev",
+      "mode": "E3",
+      "repeat": 0,
+      "status": "clarify",
+      "correct": 1,
+      "latency_ms": 894.8,
+      "tokens": 732,
+      "tool_calls": 0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 7.45,
+          "rows": 5000,
+          "columns": [
+            "Turn number",
+            "Game number",
+            "Roll 1",
+            "Roll 2",
+            "Roll 3",
+            "Roll 4",
+            "Roll 5",
+            "Roll 6"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 894.75,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Which changes are you interested in?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 894.77,
+          "question": "Which changes are you interested in?"
+        }
+      ]
+    }
+  ],
+  "accuracy_mean": 1,
+  "accuracy_std": null
+}

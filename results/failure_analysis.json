@@ -1,0 +1,913 @@
+{
+  "failure_frequency_by_run": {
+    "over_clarification": 4,
+    "wrong_execution_semantics": 3
+  },
+  "representative_successes": [
+    {
+      "task": {
+        "id": "dsd010",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the average Invoice Number?",
+        "expected": 1709.5712,
+        "status": "answered",
+        "category": "mean",
+        "oracle_plan": {
+          "operation": "mean",
+          "column": "Invoice Number",
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 0,
+      "status": "answered",
+      "correct": true,
+      "latency_ms": 782.58,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 16.59,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 777.68,
+          "plan": {
+            "operation": "mean",
+            "column": "Invoice Number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 777.76,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 780.21,
+          "output": {
+            "value": 1709.5712,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 782.52,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Invoice Number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 782.54,
+          "value": 1709.5712
+        }
+      ]
+    },
+    {
+      "task": {
+        "id": "dsd011",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the total Invoice Number?",
+        "expected": 8547856,
+        "status": "answered",
+        "category": "sum",
+        "oracle_plan": {
+          "operation": "sum",
+          "column": "Invoice Number",
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 0,
+      "status": "answered",
+      "correct": true,
+      "latency_ms": 630.95,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 21.4,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 625.18,
+          "plan": {
+            "operation": "sum",
+            "column": "Invoice Number",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 625.31,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 628.33,
+          "output": {
+            "value": 8547856,
+            "rows_used": 5000,
+            "input_rows": 5000
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 630.86,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 5000,
+              "source_columns": [
+                "Invoice Number"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 630.88,
+          "value": 8547856
+        }
+      ]
+    }
+  ],
+  "representative_failures": [
+    {
+      "task": {
+        "id": "dsd016",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the total Invoice Number where Item Code is greater than 25.0?",
+        "expected": 4266731,
+        "status": "answered",
+        "category": "filtered_sum",
+        "oracle_plan": {
+          "operation": "sum",
+          "column": "Invoice Number",
+          "filters": [
+            {
+              "column": "Item Code",
+              "op": "gt",
+              "value": 25.0
+            }
+          ],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 0,
+      "status": "clarify",
+      "correct": false,
+      "latency_ms": 986.0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 11.73,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 985.92,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [
+              {
+                "column": "Item Code",
+                "op": "gt",
+                "value": 25
+              }
+            ],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 985.94,
+          "question": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+        }
+      ],
+      "failure_category": "over_clarification"
+    },
+    {
+      "task": {
+        "id": "dsd060",
+        "split": "validation",
+        "file": "table_07.csv",
+        "question": "How many rows are there?",
+        "expected": 23,
+        "status": "answered",
+        "category": "count",
+        "oracle_plan": {
+          "operation": "count",
+          "column": null,
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000010"
+      },
+      "repeat": 0,
+      "status": "answered",
+      "correct": false,
+      "latency_ms": 3138.33,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 20.93,
+          "rows": 23,
+          "columns": [
+            "List of Teams",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Your Ladder - For Check Sum Calculation",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "D",
+            "E",
+            "D3",
+            "E3"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3133.48,
+          "plan": {
+            "operation": "count",
+            "column": "List of Teams",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3133.61,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3136.05,
+          "output": {
+            "value": 20,
+            "rows_used": 23,
+            "input_rows": 23
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3138.24,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 23,
+              "source_columns": [
+                "List of Teams"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3138.27,
+          "value": 20
+        }
+      ],
+      "failure_category": "wrong_execution_semantics"
+    }
+  ],
+  "all_failures": [
+    {
+      "task": {
+        "id": "dsd016",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the total Invoice Number where Item Code is greater than 25.0?",
+        "expected": 4266731,
+        "status": "answered",
+        "category": "filtered_sum",
+        "oracle_plan": {
+          "operation": "sum",
+          "column": "Invoice Number",
+          "filters": [
+            {
+              "column": "Item Code",
+              "op": "gt",
+              "value": 25.0
+            }
+          ],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 0,
+      "status": "clarify",
+      "correct": false,
+      "latency_ms": 986.0,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 11.73,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 985.92,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [
+              {
+                "column": "Item Code",
+                "op": "gt",
+                "value": 25
+              }
+            ],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 985.94,
+          "question": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+        }
+      ],
+      "failure_category": "over_clarification"
+    },
+    {
+      "task": {
+        "id": "dsd060",
+        "split": "validation",
+        "file": "table_07.csv",
+        "question": "How many rows are there?",
+        "expected": 23,
+        "status": "answered",
+        "category": "count",
+        "oracle_plan": {
+          "operation": "count",
+          "column": null,
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000010"
+      },
+      "repeat": 0,
+      "status": "answered",
+      "correct": false,
+      "latency_ms": 3138.33,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 20.93,
+          "rows": 23,
+          "columns": [
+            "List of Teams",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Your Ladder - For Check Sum Calculation",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "D",
+            "E",
+            "D3",
+            "E3"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3133.48,
+          "plan": {
+            "operation": "count",
+            "column": "List of Teams",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3133.61,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3136.05,
+          "output": {
+            "value": 20,
+            "rows_used": 23,
+            "input_rows": 23
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3138.24,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 23,
+              "source_columns": [
+                "List of Teams"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3138.27,
+          "value": 20
+        }
+      ],
+      "failure_category": "wrong_execution_semantics"
+    },
+    {
+      "task": {
+        "id": "dsd011",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the total Invoice Number?",
+        "expected": 8547856,
+        "status": "answered",
+        "category": "sum",
+        "oracle_plan": {
+          "operation": "sum",
+          "column": "Invoice Number",
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 1,
+      "status": "clarify",
+      "correct": false,
+      "latency_ms": 3115.31,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 14.9,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3115.27,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Do you want the sum of Invoice Number values or the count of invoices?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 3115.29,
+          "question": "Do you want the sum of Invoice Number values or the count of invoices?"
+        }
+      ],
+      "failure_category": "over_clarification"
+    },
+    {
+      "task": {
+        "id": "dsd016",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the total Invoice Number where Item Code is greater than 25.0?",
+        "expected": 4266731,
+        "status": "answered",
+        "category": "filtered_sum",
+        "oracle_plan": {
+          "operation": "sum",
+          "column": "Invoice Number",
+          "filters": [
+            {
+              "column": "Item Code",
+              "op": "gt",
+              "value": 25.0
+            }
+          ],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 1,
+      "status": "clarify",
+      "correct": false,
+      "latency_ms": 3247.92,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 12.47,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3247.86,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [
+              {
+                "column": "Item Code",
+                "op": "gt",
+                "value": 25
+              }
+            ],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 3247.88,
+          "question": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+        }
+      ],
+      "failure_category": "over_clarification"
+    },
+    {
+      "task": {
+        "id": "dsd060",
+        "split": "validation",
+        "file": "table_07.csv",
+        "question": "How many rows are there?",
+        "expected": 23,
+        "status": "answered",
+        "category": "count",
+        "oracle_plan": {
+          "operation": "count",
+          "column": null,
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000010"
+      },
+      "repeat": 1,
+      "status": "answered",
+      "correct": false,
+      "latency_ms": 953.75,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 25.91,
+          "rows": 23,
+          "columns": [
+            "List of Teams",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Your Ladder - For Check Sum Calculation",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "D",
+            "E",
+            "D3",
+            "E3"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 950.42,
+          "plan": {
+            "operation": "count",
+            "column": "List of Teams",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 950.58,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 952.43,
+          "output": {
+            "value": 20,
+            "rows_used": 23,
+            "input_rows": 23
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 953.69,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 23,
+              "source_columns": [
+                "List of Teams"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 953.71,
+          "value": 20
+        }
+      ],
+      "failure_category": "wrong_execution_semantics"
+    },
+    {
+      "task": {
+        "id": "dsd016",
+        "split": "validation",
+        "file": "table_02.csv",
+        "question": "What is the total Invoice Number where Item Code is greater than 25.0?",
+        "expected": 4266731,
+        "status": "answered",
+        "category": "filtered_sum",
+        "oracle_plan": {
+          "operation": "sum",
+          "column": "Invoice Number",
+          "filters": [
+            {
+              "column": "Item Code",
+              "op": "gt",
+              "value": 25.0
+            }
+          ],
+          "group_by": []
+        },
+        "source_competition": "00000034"
+      },
+      "repeat": 2,
+      "status": "clarify",
+      "correct": false,
+      "latency_ms": 1104.72,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 11.88,
+          "rows": 5000,
+          "columns": [
+            "Date",
+            "Invoice Number",
+            "Item Code",
+            "Sales Person",
+            "Manager On Duty",
+            "Ticket Price Price Per Unit",
+            "Discount Given",
+            "Sales Price Per Unit",
+            "Cost per Unit",
+            "Quantity",
+            "Postal Code"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 1104.64,
+          "plan": {
+            "operation": null,
+            "column": null,
+            "filters": [
+              {
+                "column": "Item Code",
+                "op": "gt",
+                "value": 25
+              }
+            ],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "clarify",
+          "elapsed_ms": 1104.67,
+          "question": "Do you want the sum of Invoice Number values or the count of invoices where Item Code > 25.0?"
+        }
+      ],
+      "failure_category": "over_clarification"
+    },
+    {
+      "task": {
+        "id": "dsd060",
+        "split": "validation",
+        "file": "table_07.csv",
+        "question": "How many rows are there?",
+        "expected": 23,
+        "status": "answered",
+        "category": "count",
+        "oracle_plan": {
+          "operation": "count",
+          "column": null,
+          "filters": [],
+          "group_by": []
+        },
+        "source_competition": "00000010"
+      },
+      "repeat": 2,
+      "status": "answered",
+      "correct": false,
+      "latency_ms": 3272.16,
+      "trace": [
+        {
+          "state": "profile",
+          "elapsed_ms": 24.78,
+          "rows": 23,
+          "columns": [
+            "List of Teams",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Your Ladder - For Check Sum Calculation",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "D",
+            "E",
+            "D3",
+            "E3"
+          ]
+        },
+        {
+          "state": "plan",
+          "elapsed_ms": 3268.19,
+          "plan": {
+            "operation": "count",
+            "column": "List of Teams",
+            "filters": [],
+            "group_by": [],
+            "assumptions": [],
+            "clarification": ""
+          },
+          "provider": "groq"
+        },
+        {
+          "state": "contract",
+          "elapsed_ms": 3268.28,
+          "valid": true,
+          "enabled": true
+        },
+        {
+          "state": "execute",
+          "elapsed_ms": 3269.97,
+          "output": {
+            "value": 20,
+            "rows_used": 23,
+            "input_rows": 23
+          }
+        },
+        {
+          "state": "verify",
+          "elapsed_ms": 3272.08,
+          "verdict": {
+            "passed": true,
+            "checks": {
+              "plan_valid": true,
+              "recomputed_value": true,
+              "rows_used": 23,
+              "source_columns": [
+                "List of Teams"
+              ]
+            }
+          }
+        },
+        {
+          "state": "answer",
+          "elapsed_ms": 3272.1,
+          "value": 20
+        }
+      ],
+      "failure_category": "wrong_execution_semantics"
+    }
+  ]
+}

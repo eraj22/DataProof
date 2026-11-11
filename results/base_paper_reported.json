@@ -1,0 +1,8 @@
+{
+  "paper": "DSBench: How Far Are Data Science Agents from Becoming Data Science Experts?",
+  "venue": "ICLR 2025",
+  "official_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/50e9ad960ae78b741a6b4fea533f2eaf-Abstract-Conference.html",
+  "reported_data_analysis_success": 0.3412,
+  "reproduced_by_project": false,
+  "comparison_note": "Context only. The DataProof evaluation uses contract-compatible questions derived from DSBench workbooks, not the official DSBench task definitions."
+}

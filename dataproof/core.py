@@ -50,6 +50,12 @@ def validate_plan(plan, frame):
         raise AnalysisError("Unknown plan fields.")
     if plan.get("clarification"):
         return plan
+    if plan.get("group_by") is None:
+        plan["group_by"] = []
+    if plan.get("filters") is None:
+        plan["filters"] = []
+    if isinstance(plan.get("assumptions"), str):
+        plan["assumptions"] = [plan["assumptions"]]
     op = plan.get("operation")
     col = plan.get("column")
     if op not in OPS or (op != "count" and col not in frame.columns):
@@ -132,11 +138,15 @@ def groq_json(messages, model=None):
                 detail = "rate limit or service unavailable" if exc.code in {429, 500, 502, 503, 504} else exc.read(300).decode("utf-8", "replace")
                 raise AnalysisError("Groq HTTP error " + str(exc.code) + ": " + detail) from exc
             time.sleep(min(2 ** (attempt + 1), 20))
-        except (urllib.error.URLError, KeyError, json.JSONDecodeError) as exc:
-            raise AnalysisError("Groq request failed: " + str(exc)) from exc
+        except urllib.error.URLError as exc:
+            if attempt == 5:
+                raise AnalysisError("Groq request failed after retries: " + str(exc)) from exc
+            time.sleep(min(2 ** (attempt + 1), 20))
+        except (KeyError, json.JSONDecodeError) as exc:
+            raise AnalysisError("Groq response could not be parsed: " + str(exc)) from exc
 
 
-SYSTEM = """You are a careful data analyst. Return only a JSON object with keys operation, column, filters, group_by, assumptions, clarification. Operations: count,sum,mean,min,max,median,nunique. Filters are objects with column,op,value; op is eq,ne,gt,ge,lt,le. Use exact column names. If the user's metric, time range, grouping, or filter is materially ambiguous, set clarification to a concise question and do not guess. Never invent columns. No Python code."""
+SYSTEM = """You are a careful data analyst. Return only a JSON object with keys operation, column, filters, group_by, assumptions, clarification. Operations: count,sum,mean,min,max,median,nunique. Filters are objects with column,op,value; op is eq,ne,gt,ge,lt,le. Use exact column names. In these benchmark questions, 'total COLUMN' explicitly means sum COLUMN. 'How many rows' explicitly means count with column null, so missing values in a column do not change the row count. If the user's metric, time range, grouping, or filter is materially ambiguous, set clarification to a concise question and do not guess. Never invent columns. No Python code."""
 
 
 def heuristic_plan(question, frame):

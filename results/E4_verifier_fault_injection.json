@@ -1,0 +1,147 @@
+{
+  "tasks": 28,
+  "clean_acceptance": 1.0,
+  "corruption_recall": 1.0,
+  "rows": [
+    {
+      "id": "dsd019",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd020",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd021",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd022",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd023",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd024",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd025",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd028",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd029",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd030",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd031",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd032",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd033",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd034",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd037",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd038",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd039",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd040",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd041",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd042",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd043",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd046",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd047",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd048",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd049",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd050",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd051",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    },
+    {
+      "id": "dsd052",
+      "clean_accepted": true,
+      "corruption_rejected": true
+    }
+  ]
+}

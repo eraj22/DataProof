@@ -1,0 +1,102 @@
+{
+  "evaluation_scope": {
+    "source": "DSBench official workbooks",
+    "derived_tasks": 54,
+    "note": "Contract-compatible questions derived from workbook tables; not official DSBench questions."
+  },
+  "E1": {
+    "configuration": "E1 heuristic baseline",
+    "result_file": "E1_dsbench_derived.json",
+    "unique_tasks": 54,
+    "repeats": 3,
+    "accuracy_mean": 0.6296296296296297,
+    "accuracy_std": 0.0,
+    "latency_ms_mean": 12.277407407407408,
+    "tokens_total": 0,
+    "tool_calls_total": 108,
+    "error_statuses": 54,
+    "provider_errors": 0
+  },
+  "E2": {
+    "source": "DSBench paper",
+    "reported_data_analysis_success": 0.3412,
+    "reproduced": false,
+    "comparability": "Published aggregate is contextual only; task definitions differ."
+  },
+  "E3": {
+    "configuration": "E3 DataProof",
+    "result_file": "E3_dsbench_derived.json",
+    "unique_tasks": 54,
+    "repeats": 3,
+    "accuracy_mean": 0.95679012345679,
+    "accuracy_std": 0.010691671651659719,
+    "latency_ms_mean": 2375.259814814815,
+    "tokens_total": 146402,
+    "tool_calls_total": 122,
+    "error_statuses": 0,
+    "provider_errors": 0
+  },
+  "E4": {
+    "verifier_fault_injection": {
+      "tasks": 28,
+      "clean_acceptance": 1.0,
+      "corruption_recall": 1.0
+    },
+    "ambiguity_accuracy": 1
+  },
+  "E5": {
+    "pilot_no_contract": {
+      "configuration": "Pilot no contract",
+      "result_file": "no_contract_pilot.json",
+      "unique_tasks": 9,
+      "repeats": 3,
+      "accuracy_mean": 0.8888888888888888,
+      "accuracy_std": 0.0,
+      "latency_ms_mean": 757.2533333333333,
+      "tokens_total": 12561,
+      "tool_calls_total": 21,
+      "error_statuses": 0,
+      "provider_errors": 0
+    },
+    "pilot_no_verifier": {
+      "configuration": "Pilot no verifier",
+      "result_file": "no_verifier_pilot.json",
+      "unique_tasks": 9,
+      "repeats": 3,
+      "accuracy_mean": 1,
+      "accuracy_std": 0.0,
+      "latency_ms_mean": 2497.2703703703705,
+      "tokens_total": 12624,
+      "tool_calls_total": 18,
+      "error_statuses": 0,
+      "provider_errors": 0
+    },
+    "pilot_no_abstention": {
+      "configuration": "Pilot no abstention",
+      "result_file": "no_abstention_pilot.json",
+      "unique_tasks": 9,
+      "repeats": 3,
+      "accuracy_mean": 0.6666666666666666,
+      "accuracy_std": 0.0,
+      "latency_ms_mean": 1939.3140740740741,
+      "tokens_total": 12709,
+      "tool_calls_total": 18,
+      "error_statuses": 9,
+      "provider_errors": 0
+    },
+    "limitation": "Ablations use the nine-task pilot and are directional, not final DSBench-derived estimates."
+  },
+  "E6": {
+    "latency_ms_mean": 2375.259814814815,
+    "tokens_total": 146402,
+    "tool_calls_total": 122,
+    "provider_errors": 0
+  },
+  "failures": {
+    "total_failed_runs": 7,
+    "categories": {
+      "over_clarification": 4,
+      "wrong_execution_semantics": 3
+    }
+  }
+}
